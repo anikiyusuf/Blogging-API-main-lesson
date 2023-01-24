@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Tech-Blog App</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4"> All Published Blogs </h1>
+        <h4>Hey <%= user.lastName %>, See what other techies are talking about💡</h4>
+        <a href="/blogs/<%= user.id %>" class="btn btn-success">My Blogs</a>
+        
+        <% blogs.forEach(blog=>{ %>
+            <div class="card mt-4">
+               <div class="card-body">
+                <h4 class="card-title"> <%= blog.title %> </h4>
+                <div class="card-subtitle text-muted mb-2">
+                    <%= blog.createdAt.toLocaleDateString() %>
+                    <span>👁<%= blog.readCount %></span>
+                </div>
+                <div class="card-text mb-2"><%= blog.description %></div>
+                <a href="/blogs/seePublished/<%= blog.id %>/<%= user.id %>" class="btn btn-primary">Read More</a>
+               </div>
+            </div>
+       <% }) %>
+    </div>
+</body>
+</html>

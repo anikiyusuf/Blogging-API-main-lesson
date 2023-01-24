@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Tech-Blog App</title>
+</head>
+<body>
+    <div class="container">
+       <h3 class="mb-6 mt-4">The Tech-Blog</h3>
+       <p>Welcome to the Tech-Blog, Lets sign you up for the fantastic xperience ahead!</p>
+       <% if(error) { %>
+        <h4> <%= error %> </h4>
+         <% } %>
+       <form action="/auth/signup" method="POST">
+        <div class="mb-3">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
+          <div class="mb-3">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+  <div class="mb-3">
+    <label for="email">Email address</label>
+    <input type="email" id="email" name="email" required aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+  </div>
+  <div class="mb-3">
+    <h6>Already have an account?, <a href="/auth/login">Log in</a> instead </h6>
+  </div>
+  <button type="submit" class="btn btn-primary">Sign Up</button>
+</form>
+    </div>
+</body>
+</html>

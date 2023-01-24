@@ -1,0 +1,55 @@
+{
+  "name": "blogging-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mister-abdurahman/Blogging-API.git"
+  },
+  "keywords": [],
+  "author": "Aramide Ramadan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mister-abdurahman/Blogging-API/issues"
+  },
+  "homepage": "https://github.com/mister-abdurahman/Blogging-API#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "connect-ensure-login": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "dompurify": "^2.4.3",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.7.0",
+    "express-session": "^1.17.3",
+    "helmet": "^6.0.1",
+    "joi": "^17.7.0",
+    "jsdom": "^20.0.3",
+    "jsonwebtoken": "^8.5.1",
+    "logger": "^0.0.1",
+    "marked": "^4.2.5",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.7.0",
+    "morgan": "^1.10.0",
+    "morgan-json": "^1.1.0",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^7.1.2",
+    "path": "^0.12.7",
+    "slugify": "^1.6.5",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.3"
+  }
+}
